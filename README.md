@@ -1,73 +1,208 @@
-# Welcome to your Lovable project
+# GM Admin - Venue Management Platform
 
-## Project info
+A dedicated staff dashboard and venue management system for GM's karaoke and venue hire operations. This admin-only application enables venue managers to efficiently handle bookings, customer management, and operational analytics.
 
-**URL**: https://lovable.dev/projects/89a8f81d-7e39-4a14-8ec6-02adfe379344
+## Project Overview
 
-## How can I edit this code?
+GM Admin is the staff-facing management platform that streamlines venue operations and automates administrative functions. The platform eliminates manual booking processes and provides comprehensive tools for venue managers to focus on customer experience and strategic initiatives.
 
-There are several ways of editing your application.
+### Goals
 
-**Use Lovable**
+- **Centralized Management**: Single dashboard for all venue operations and bookings
+- **Automate Administrative Tasks**: Free up staff from data entry, analysis, and manual processes
+- **Data-Driven Insights**: Provide analytics and reporting for informed decision-making
+- **Multi-Venue Support**: Scale from Manor to multiple venues including Hippie Club
+- **Ultimate Goal**: 80% reduction in time spent on booking administration tasks
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/89a8f81d-7e39-4a14-8ec6-02adfe379344) and start prompting.
+### Success Metrics
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Stage 1**: 100% of Manor venue hire bookings processed through the platform
+- **Stage 3**: 100% of all bookings across all venues processed through the platform
+- **Ultimate**: Staff spending 80% less time on administrative booking tasks
 
-**Use your preferred IDE**
+## Application Architecture
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Admin-Only Focus
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+This codebase is exclusively for **staff and venue managers**. Customer-facing booking flows are handled by a separate customer application. This separation ensures:
 
-Follow these steps:
+- **Focused User Experience**: Optimized specifically for staff workflows
+- **Security**: Admin functions isolated from customer interfaces  
+- **Scalability**: Independent deployment and scaling of admin vs customer systems
+- **Maintenance**: Simplified codebase focused on management features
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Implementation Stages
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Stage 1: Core Management Platform (Month 1)
+- Staff dashboard with key metrics and today's schedule
+- Booking management interface for Manor karaoke and venue hire
+- Customer database and booking repository
+- Multi-tenant architecture foundation
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Stage 2: Advanced Analytics and Automation (Month 2)
+- Enhanced reporting and customer segmentation
+- Automated booking management workflows
+- Promo code management and bulk communications
+- Revenue analytics and performance tracking
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### Stage 3: Multi-Venue Expansion (Month 3)
+- Hippie Club integration and management
+- Unified booking management across venues
+- Cross-venue analytics and reporting
+- Enhanced mobile staff interface
 
-**Edit a file directly in GitHub**
+### Stage 4: Business Intelligence (Month 4)
+- Predictive analytics and business intelligence
+- Performance benchmarking and KPIs
+- Multi-venue framework for future expansion
+- Advanced staff productivity tools
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Technology Stack
 
-**Use GitHub Codespaces**
+- **Framework**: Next.js 15 with App Router
+- **Styling**: Tailwind CSS with shadcn/ui components
+- **Database**: [To be defined in technical documentation]
+- **Deployment**: Vercel
+- **Authentication**: [To be defined for staff access]
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Getting Started
 
-## What technologies are used for this project?
+### Prerequisites
 
-This project is built with:
+- Node.js 18.18 or later
+- npm, yarn, or pnpm
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Installation
 
-## How can I deploy this project?
+1. Clone the repository
+2. Install dependencies:
+   \`\`\`bash
+   npm install
+   \`\`\`
+3. Run the development server:
+   \`\`\`bash
+   npm run dev
+   \`\`\`
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-Simply open [Lovable](https://lovable.dev/projects/89a8f81d-7e39-4a14-8ec6-02adfe379344) and click on Share -> Publish.
+### Development Scripts
 
-## Can I connect a custom domain to my Lovable project?
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-Yes, you can!
+## Application Structure
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+\`\`\`
+app/
+├── dashboard/              # Main dashboard (home page)
+├── bookings/              # Booking management
+├── customers/             # Customer management
+├── reports/               # Analytics and reporting
+├── settings/              # Venue and system settings
+└── design/                # Design system (dev only)
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+components/
+├── app-sidebar.tsx        # Main navigation
+└── ui/                    # shadcn/ui components
+
+mock-data/                 # Development mock data
+docs/                      # Project documentation
+\`\`\`
+
+## Key Features
+
+### Dashboard
+- Real-time metrics: bookings, revenue, occupancy
+- Today's schedule with booking management
+- Quick actions for common staff tasks
+- Multi-venue overview and switching
+
+### Booking Management
+- Complete booking lifecycle management
+- Calendar view with drag-and-drop scheduling
+- Customer communication and notifications
+- Pricing management and discount codes
+
+### Customer Management
+- Customer profiles and booking history
+- Segmentation and loyalty program management
+- Communication tools and bulk messaging
+- Customer insights and analytics
+
+### Analytics & Reporting
+- Revenue tracking and forecasting
+- Booking trends and capacity analysis
+- Staff performance metrics
+- Custom report generation
+
+## Target Users
+
+### Venue Managers
+- Day-to-day operational management
+- Booking oversight and customer service
+- Performance monitoring and reporting
+
+### Regional Managers
+- Multi-venue oversight and comparison
+- Strategic planning and resource allocation
+- Performance benchmarking across venues
+
+### Staff Members
+- Booking creation and modification
+- Customer service and communication
+- Daily operational tasks
+
+## Documentation
+
+All project documentation is located in the `/docs` directory:
+
+- **Product Requirements**: `/docs/product/product-requirements.md`
+- **Design Specification**: `/docs/product/design-spec.md`
+- **System Architecture**: `/docs/technical/system-architecture.md`
+- **API Specification**: `/docs/technical/api-specification.md`
+- **Database Schema**: `/docs/technical/entity-relationship-diagram.md`
+- **Business Logic**: `/docs/product/business-logic.md`
+- **User Flows**: `/docs/product/user-flows.md`
+- **Technical Decisions**: `/docs/technical/technical-decisions.md`
+
+## Development Notes
+
+### Mock Data
+The application includes comprehensive mock data in `/mock-data` for development and testing. This data simulates realistic venue operations and can be used for:
+
+- Component development and testing
+- UI/UX validation
+- Performance testing
+- Demo and presentation purposes
+
+### Design System
+Access the complete design system at `/design` (development only) to view:
+- Color palettes and typography
+- Component library and usage guidelines
+- Layout systems and responsive patterns
+- Accessibility standards
+
+## Contributing
+
+1. Review the project documentation in `/docs`
+2. Follow the established coding standards and design system
+3. Test thoroughly before submitting changes
+4. Update documentation when making significant changes
+
+## Deployment
+
+The application is designed for deployment on Vercel with:
+- Automatic deployments from main branch
+- Preview deployments for pull requests
+- Environment variable management
+- Performance monitoring and analytics
+
+## License
+
+[Add your license information here]
+
+## Support
+
+For technical support or questions about the platform, please contact the development team.
