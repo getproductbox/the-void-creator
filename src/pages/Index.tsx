@@ -1,18 +1,8 @@
 
-import { Hero } from "@/components/Hero";
-import { About } from "@/components/About";
-import { Services } from "@/components/Services";
-import { Contact } from "@/components/Contact";
-import { Navigation } from "@/components/Navigation";
-
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
-      <Navigation />
-      <Hero />
-      <About />
-      <Services />
-      <Contact />
+    <div className="min-h-screen bg-white">
+      <h1 className="text-2xl font-bold text-center pt-20">Hello World</h1>
     </div>
   );
 };
